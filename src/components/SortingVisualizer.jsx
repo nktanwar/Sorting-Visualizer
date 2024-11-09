@@ -5,7 +5,7 @@ import { useRecoilState, useRecoilValue } from 'recoil';
 import { callState, initialSz, legend } from '../assets/atoms';
 
 
-const SortVisualizer = ({ height, disabled, initialTime }) => {
+const SortVisualizer = ({ height,  initialTime }) => {
     const [call, setCall] = useRecoilState(callState);
     const [array, setArray] = useState([]);
     const [isSorting, setIsSorting] = useState(false);
@@ -18,6 +18,28 @@ const SortVisualizer = ({ height, disabled, initialTime }) => {
     const [mergedI, setMergedI] = useState([]);
     const initialSize= useRecoilValue(initialSz);
     const isLegend = useRecoilValue(legend);
+    const [containerWidth, setContainerWidth] = useState(600);
+
+  useEffect(() => {
+    const updateContainerWidth = () => {
+      if (window.innerWidth >= 1024) {     
+        setContainerWidth(570);
+      } else if (window.innerWidth >= 768) { 
+        setContainerWidth(450);
+      } else {                               
+        setContainerWidth(350);
+      }
+    };
+
+    // Set initial width
+    updateContainerWidth();
+
+    // Listen for resize events
+    window.addEventListener('resize', updateContainerWidth);
+
+    // Cleanup event listener on component unmount
+    return () => window.removeEventListener('resize', updateContainerWidth);
+  }, []);
     
 
     useEffect(() => {
@@ -262,15 +284,14 @@ const SortVisualizer = ({ height, disabled, initialTime }) => {
         await new Promise(resolve => setTimeout(resolve, 1.5 * time));
     };
 
-    const containerWidth = 600; // Adjust according to your layout
+    // const containerWidth = 600; // Adjust according to your layout
     const barWidth = Math.max(containerWidth / initialSize, 1); // Minimum width for visibility
 
     return (
         <div className="flex flex-col md:flex">
             <div className=" md:flex flex-col items-center">
                 <div 
-                    style={{ height: `${height}px`, width: `${containerWidth}px` }}
-                    className="bg-blue-100 flex justify-center text-white font-bold rounded-md p-2 relative mb-6 shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                    className="bg-blue-100 flex justify-center min-h-[500px] w-auto text-white font-bold rounded-md p-2 relative mb-6 shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
                 >
                     <div className="flex justify-start items-end w-full ">
                         {array.map((value, index) => {
@@ -301,7 +322,7 @@ const SortVisualizer = ({ height, disabled, initialTime }) => {
                         })}
                     </div>
                 </div>
-                <div className="flex flex-col mb-7 md: md:flex p-3 justify-center bg-blue-500 shadow-lg transform transition-all md:duration-300 md:hover:scale-105 md:hover:shadow-2xl md:rounded-2xl">
+                <div className="flex flex-col mb-7 md: md:flex p-3 justify-center bg-blue-500 shadow-lg transform transition-all md:duration-300 md:hover:scale-105 md:hover:shadow-2xl rounded-2xl">
                     <ButtonN handleClick={generateArray}
                         disabled={isSorting} text={'Reset Graph'} />
                 </div>

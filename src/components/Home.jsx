@@ -56,8 +56,8 @@ const Home = () => {
 
                 </div>
 
-                <div className='md:w-1/3 '>
-                    <Box width="100%" height={50} />
+                <div >
+                    <Box  />
 
                 </div>
 
@@ -69,17 +69,17 @@ const Home = () => {
 
             <div className=" flex flex-col md:flex-row md:justify-evenly md:ml-10">
 
-                <div className="w-full md:w-1/2" >
+                <div className=" " >
                     <SortVisualizer initialTime={time} height={500} />
                 </div>
 
-                <div className='flex flex-col w-full md:w-1/2 h-auto'>
-                    <div className='flex flex-col justify-items-center'>
-                        <BoxM width={600} height={300} Button={Button} />
+                <div className='flex flex-col max-w-[525px] h-auto'>
+                    <div className='flex flex-col  justify-items-center'>
+                        <BoxM  Button={Button} />
 
 
 
-                        <div className='flex'>
+                        <div className='flex '>
                             {/* Bubble Sort Components */}
                             {isLegend[0] && isDownS && !isDownC && !isDownTC && !isDownSS && <BubbleSortDescription />}
                             {!isDownS && !isDownC && !isDownTC && isDownSS && <BubbleSS />}

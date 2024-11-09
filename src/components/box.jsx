@@ -7,7 +7,7 @@ import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { downC, downS, downSS, downTC,text } from '../assets/atoms';
 
 
-export  function Box({width,height,}){
+export  function Box(){
     const navigate = useNavigate(); 
     const handleNavigate = () => {
         navigate('/algo'); 
@@ -16,11 +16,11 @@ export  function Box({width,height,}){
     
     const boxclass=classNames(
         
-        "flex bg-violet-500 justify-center text-white text-3xl p-3 font-extrabold rounded-xl shadow-lg transform transition-all duration-300  hover:shadow-2xl"
+        "flex bg-violet-500 justify-center text-white text-3xl p-3 font-extrabold rounded-xl shadow-lg transform transition-all duration-300  hover:shadow-2xl mb-4 md:mb-0"
     );
     const boxclass1=classNames(
         
-        "flex bg-violet-500 justify-center text-white text-3xl p-3 font-extrabold rounded-md   "
+        "flex bg-violet-500 justify-center text-white text-2xl md:text-3xl p-3 font-extrabold rounded-    "
     );
     
 
@@ -29,7 +29,7 @@ export  function Box({width,height,}){
             
             <div className={boxclass1}>Sorting with</div>
             <div className='mt-1 shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl rounded-2xl'>
-            <ButtonN  width={width-100} height={height}  handleClick={handleNavigate} text = {SelectedSorting }/>
+            <ButtonN    handleClick={handleNavigate} text = {SelectedSorting }/>
 
             </div>
            
@@ -50,7 +50,7 @@ export  function Box({width,height,}){
 
 
 
-export const BoxM = ({ height, width,  Button }) => {
+export const BoxM = ({ Button }) => {
     const setS=useSetRecoilState(downS);
     const setSS=useSetRecoilState(downSS);
     const setTC = useSetRecoilState(downTC);
@@ -84,18 +84,18 @@ export const BoxM = ({ height, width,  Button }) => {
     return (
 
         <div
-            style={{ height: `${height}px`, width: `${width}px` }}
-            className="bg-blue-100 grid grid-cols-1 gap-4 justify-items-center items-center text-white font-bold rounded-md p-10 shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+           
+            className="bg-blue-100 grid grid-cols-1 gap-4 w-auto justify-items-center items-center text-white font-bold rounded-md p-8 shadow-lg transform transition-all  duration-300 hover:scale-105 hover:shadow-2xl"
         >
-            {Button && <Button handleC={handleS} width={200} height={60} text={'Description'}  />}
+            {Button && <Button handleC={handleS}  text={'Description'}  />}
 
-            {Button && <Button handleC={handleSS} width={250} height={60} text={'Sorting Setting'} />}
+            {Button && <Button handleC={handleSS}  text={'Sorting Setting'} />}
 
             <div className='p-1 gap-2 flex justify-items-center items-center  '>
                 
-            {Button && <Button handleC={handleTC} width={250} height={60} text={'Time complexity'}  />}
+            {Button && <Button handleC={handleTC}  text={'Time complexity'}  />}
 
-            {Button && <Button handleC={handleSC} width={250} height={60} text={' Space complexity'} />}
+            {Button && <Button handleC={handleSC}  text={' Space complexity'} />}
             </div>
 
 
@@ -112,10 +112,9 @@ export const BoxM = ({ height, width,  Button }) => {
 
 
 
-export const BoxS = ({ height, width, Graph }) => {
+export const BoxS = () => {
     return (
         <div
-            style={{ height: `${height}px`, width: `${width}px` }}
             className="bg-blue-100 grid grid-cols-1 gap-4 justify-items-center items-end text-white font-bold rounded-md p-2 relative"
         >
             

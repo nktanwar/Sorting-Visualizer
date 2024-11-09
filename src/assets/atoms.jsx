@@ -39,7 +39,7 @@ export const text=atom({
 
 export const legend =atom({
     key:'legend',
-    default:[false,false,false,false,false]
+    default:[true,false,false,false,false]
 
 })
 

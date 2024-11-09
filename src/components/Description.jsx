@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React  from 'react';
 import { useRecoilState } from 'recoil';
 import { inputTime,initialSz} from '../assets/atoms';
 
 
 export function BubbleSortDescription() {
     return (
-        <div className='bg-blue-100 w-[600px] h-[40vh] mt-10 rounded-lg text-blue-900 font-semibold p-4 shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
+        <div className='bg-blue-100  w-full h-full md:w-[600px] mt-10 rounded-lg text-blue-900 font-semibold p-4 shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
             <h2 className="font-bold mb-2">Bubble Sort Description:</h2>
             <p>
                 Bubble Sort loops through the array to compare each number with the number before it. The bigger values move to the right, so smaller values are shifted left as large values are moved to the right.
@@ -35,7 +35,7 @@ export function BubbleSS() {
     };
 
     return (
-        <div className='bg-blue-100 w-[600px] h-[30vh] mt-10 text-blue-900 font-semibold p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
+        <div className='bg-blue-100  w-full h-full md:w-[600px]  mt-10 text-blue-900 font-semibold p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
             {/* Slider for Size */}
             <div className="mt-4">
                 <label htmlFor="size-slider" className="block mb-2">Size: {sizeValue}</label>
@@ -76,7 +76,7 @@ export function BubbleSS() {
 
 export function TCBubbleSort() {
     return (
-        <div className='bg-blue-100 w-[600px] h-[40vh] mt-10 text-blue-900 font-semibold p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
+        <div className='bg-blue-100 w-full h-full md:w-[600px] mt-10 text-blue-900 font-semibold p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
             <h2 className="font-bold mb-2">Time Complexity of Bubble Sort</h2>
             <p className="mb-4">
                 The time complexity of Bubble Sort is primarily O(n²) in the average and worst cases. This is because, for each element, the algorithm compares it to every other element in the array.
@@ -95,7 +95,7 @@ export function TCBubbleSort() {
 
 export function SCBubbleSort() {
     return (
-        <div className='bg-blue-100 w-[600px] h-[40vh] mt-10 text-blue-900 font-semibold p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
+        <div className='bg-blue-100 w-full h-full md:w-[600px] mt-10 text-blue-900 font-semibold p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
             <h2 className="font-bold mb-2">Space Complexity of Bubble Sort</h2>
             <p className="mb-4">
                 The space complexity of Bubble Sort is O(1) because it requires a constant amount of additional space.
@@ -117,7 +117,7 @@ export function SCBubbleSort() {
 
 export function MergeSortDescription() {
     return (
-        <div className='bg-blue-100 w-[600px] h-[40vh] mt-10 rounded-lg text-blue-900 font-semibold p-4 shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
+        <div className='bg-blue-100 w-full h-full md:w-[600px] mt-10 rounded-lg text-blue-900 font-semibold p-4 shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
             <h2 className="font-bold mb-2">Merge Sort Description:</h2>
             <p>
                 Merge Sort is a divide-and-conquer algorithm that divides the input array into two halves, sorts them recursively, and then merges the sorted halves. It is efficient for large datasets and guarantees O(n log n) time complexity.
@@ -133,7 +133,7 @@ export function MergeSortDescription() {
 
 export function TCMergeSort() {
     return (
-        <div className='bg-blue-100 w-[600px] h-[40vh] mt-10 text-blue-900 font-semibold p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
+        <div className='bg-blue-100 w-full h-full md:w-[600px] mt-10 text-blue-900 font-semibold p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
             <h2 className="font-bold mb-2">Time Complexity of Merge Sort</h2>
             <p className="mb-4">
                 The time complexity of Merge Sort is O(n log n) in all cases (best, average, and worst). This is due to the algorithm dividing the array into halves and sorting them, leading to a logarithmic number of splits, with linear work required to merge them back together.
@@ -148,7 +148,7 @@ export function TCMergeSort() {
 
 export function SCMergeSort() {
     return (
-        <div className='bg-blue-100 w-[600px] h-[40vh] mt-10 text-blue-900 font-semibold p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
+        <div className='bg-blue-100 w-full h-full md:w-[600px] mt-10 text-blue-900 font-semibold p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
             <h2 className="font-bold mb-2">Space Complexity of Merge Sort</h2>
             <p className="mb-4">
                 The space complexity of Merge Sort is O(n) because it requires additional space for the temporary arrays used for merging.
@@ -170,7 +170,7 @@ export function SCMergeSort() {
 
 export function InsertionSortDescription() {
     return (
-        <div className='bg-blue-100 w-[600px] h-[40vh] mt-10 rounded-lg text-blue-900 font-semibold p-4 shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
+        <div className='bg-blue-100 w-full h-full md:w-[600px] mt-10 rounded-lg text-blue-900 font-semibold p-4 shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
             <h2 className="font-bold mb-2">Insertion Sort Description:</h2>
             <p>
                 Insertion Sort is a simple sorting algorithm that builds a sorted array one element at a time. It iterates through the input array, and for each element, it compares it to the elements in the sorted section and inserts it into the correct position.
@@ -186,7 +186,7 @@ export function InsertionSortDescription() {
 
 export function TCInsertionSort() {
     return (
-        <div className='bg-blue-100 w-[600px] h-[40vh] mt-10 text-blue-900 font-semibold p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
+        <div className='bg-blue-100 w-full h-full md:w-[600px] mt-10 text-blue-900 font-semibold p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
             <h2 className="font-bold mb-2">Time Complexity of Insertion Sort</h2>
             <p className="mb-4">
                 The time complexity of Insertion Sort is O(n²) in the average and worst cases. This occurs because each element is compared to the already sorted elements, requiring potentially n comparisons for n elements.
@@ -205,7 +205,7 @@ export function TCInsertionSort() {
 
 export function SCInsertionSort() {
     return (
-        <div className='bg-blue-100 w-[600px] h-[40vh] mt-10 text-blue-900 font-semibold p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
+        <div className='bg-blue-100w-full h-full md:w-[600px] mt-10 text-blue-900 font-semibold p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
             <h2 className="font-bold mb-2">Space Complexity of Insertion Sort</h2>
             <p className="mb-4">
                 The space complexity of Insertion Sort is O(1) because it only requires a constant amount of additional space for a few variables used during the sorting process.
@@ -226,7 +226,7 @@ export function SCInsertionSort() {
 
 export function QuickSortDescription() {
     return (
-        <div className='bg-blue-100 w-[600px] h-[40vh] mt-10 rounded-lg text-blue-900 font-semibold p-4 shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
+        <div className='bg-blue-100 w-full h-full md:w-[600px] mt-10 rounded-lg text-blue-900 font-semibold p-4 shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
             <h2 className="font-bold mb-2">Quick Sort Description:</h2>
             <p>
                 Quick Sort is a highly efficient sorting algorithm that uses a divide-and-conquer approach. It selects a 'pivot' element from the array and partitions the other elements into two sub-arrays according to whether they are less than or greater than the pivot. The sub-arrays are then sorted recursively.
@@ -241,7 +241,7 @@ export function QuickSortDescription() {
 
 export function TCQuickSort() {
     return (
-        <div className='bg-blue-100 w-[600px] h-[40vh] mt-10 text-blue-900 font-semibold p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
+        <div className='bg-blue-100 w-full h-full md:w-[600px] mt-10 text-blue-900 font-semibold p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
             <h2 className="font-bold mb-2">Time Complexity of Quick Sort</h2>
             <p className="mb-4">
                 The average time complexity of Quick Sort is O(n log n). However, in the worst case (when the smallest or largest element is always chosen as the pivot), the time complexity can degrade to O(n²).
@@ -264,7 +264,7 @@ export function TCQuickSort() {
 
 export function SCQuickSort() {
     return (
-        <div className='bg-blue-100 w-[600px] h-[40vh] mt-10 text-blue-900 font-semibold p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
+        <div className='bg-blue-100 w-full h-full md:w-[600px] mt-10 text-blue-900 font-semibold p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
             <h2 className="font-bold mb-2">Space Complexity of Quick Sort</h2>
             <p className="mb-4">
                 The space complexity of Quick Sort is O(log n) due to the recursion stack for the recursive calls. In the worst case, it can go up to O(n).
@@ -286,7 +286,7 @@ export function SCQuickSort() {
 
 export function SelectionSortDescription() {
     return (
-        <div className='bg-blue-100 w-[600px] h-[40vh] mt-10 rounded-lg text-blue-900 font-semibold p-4 shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
+        <div className='bg-blue-100 w-full h-full md:w-[600px] mt-10 rounded-lg text-blue-900 font-semibold p-4 shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
             <h2 className="font-bold mb-2">Selection Sort Description:</h2>
             <p>
                 Selection Sort is a simple comparison-based sorting algorithm. It divides the input array into a sorted and an unsorted region. The algorithm repeatedly selects the smallest (or largest, depending on the order) element from the unsorted region and swaps it with the first unsorted element, effectively growing the sorted region.
@@ -301,7 +301,7 @@ export function SelectionSortDescription() {
 
 export function TCSelectionSort() {
     return (
-        <div className='bg-blue-100 w-[600px] h-[40vh] mt-10 text-blue-900 font-semibold p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
+        <div className='bg-blue-100 w-full h-full md:w-[600px] mt-10 text-blue-900 font-semibold p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
             <h2 className="font-bold mb-2">Time Complexity of Selection Sort</h2>
             <p className="mb-4">
                 The time complexity of Selection Sort is O(n²) in all cases (best, average, and worst). This is because it requires two nested loops to go through the array: one to select an element and the other to find the minimum element in the unsorted part.
@@ -316,7 +316,7 @@ export function TCSelectionSort() {
 
 export function SCSelectionSort() {
     return (
-        <div className='bg-blue-100 w-[600px] h-[40vh] mt-10 text-blue-900 font-semibold p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
+        <div className='bg-blue-100 w-full h-full md:w-[600px] mt-10 text-blue-900 font-semibold p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
             <h2 className="font-bold mb-2">Space Complexity of Selection Sort</h2>
             <p className="mb-4">
                 The space complexity of Selection Sort is O(1) because it requires a constant amount of additional space for a few variables used during the sorting process.
