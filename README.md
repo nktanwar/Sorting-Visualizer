@@ -31,6 +31,9 @@ This is a Sorting Visualizer web application built with **React**, **Tailwind CS
 - **Recoil**: A state management library to handle the application's state.
 - **Vite**: A fast build tool for modern web development.
 
+##Check it here
+https://sorting-visualizer-ashy-theta.vercel.app/
+
 ## Installation
 
 ### Clone the Repository
@@ -43,6 +46,5 @@ cd Sorting-Visvalizer
 npm install
 npm run dev
 
-##Check it here
-https://sorting-visualizer-ashy-theta.vercel.app/
+
 
