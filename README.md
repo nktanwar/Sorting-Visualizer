@@ -43,3 +43,6 @@ cd Sorting-Visvalizer
 npm install
 npm run dev
 
+##Check it here
+https://sorting-visualizer-ashy-theta.vercel.app/
+
