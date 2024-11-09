@@ -23,7 +23,7 @@ const SortVisualizer = ({ height,  initialTime }) => {
   useEffect(() => {
     const updateContainerWidth = () => {
       if (window.innerWidth >= 1024) {     
-        setContainerWidth(570);
+        setContainerWidth(590);
       } else if (window.innerWidth >= 768) { 
         setContainerWidth(450);
       } else {                               
